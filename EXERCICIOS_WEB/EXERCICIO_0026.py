@@ -33,7 +33,7 @@ n = gennum()
 with open(f'/home/fernando/Área de trabalho/{num}--NumerosPrimos--{data()}--.txt', 'a+', encoding='UTF-8')as file:
     file.seek(0)
     zero = str(num)
-    qtdZero = len(zero)
+    qtdZero = len(zero) + 1
     ini = time.perf_counter()
     for i in range(num):
         # print(f'{i + 1}º = {next(n)}'.zfill(qtdZero))
