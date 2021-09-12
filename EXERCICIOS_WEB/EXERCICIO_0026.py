@@ -14,7 +14,7 @@ def gennum():
     prim = 0
     while 1:
         for i in range(cont):
-            if cont > 2 and cont % 2 == 0:
+            if cont > 11 and (cont % 2 == 0 or cont % 3 == 0 or cont % 5 == 0 or cont % 7 == 0 or cont % 11 == 0):
                 break    
             if cont % (i + 1) == 0:
                 div += 1
@@ -42,4 +42,4 @@ with open(f'/home/fernando/Área de trabalho/{num}--NumerosPrimos--{data()}--.tx
         else:
             file.writelines(f'{str(i + 1).zfill(qtdZero)}º = {str(next(n)).zfill(qtdZero)}    \n')
     term = time.perf_counter()
-    file.writelines(f'\n\nTerminado em {round(term - ini, 2)} segundos(s).\n\n')
+    file.writelines(f'\n\nTerminado em {round(term - ini, 2)} segundo(s).\n\n')
