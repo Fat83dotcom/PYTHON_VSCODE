@@ -15,8 +15,8 @@ def gennum():
     while 1:
         for i in range(cont):
             if cont > 2 and cont % 2 == 0:
-                continue
-            elif cont % (i + 1) == 0:
+                break    
+            if cont % (i + 1) == 0:
                 div += 1
         if div == 2:
             prim = cont
