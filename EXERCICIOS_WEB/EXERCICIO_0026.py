@@ -2,6 +2,7 @@
 Faça um programa que mostre N números primos
 '''
 import time
+from ConvertSec import ConvertSec
 
 def data():
     data = time.strftime('%d %b %Y %H:%M:%S', time.localtime())
@@ -42,4 +43,6 @@ with open(f'/home/fernando/Área de trabalho/{num}--NumerosPrimos--{data()}--.tx
         else:
             file.writelines(f'{str(i + 1).zfill(qtdZero)}º = {str(next(n)).zfill(qtdZero)}    \n')
     term = time.perf_counter()
-    file.writelines(f'\n\nTerminado em {round(term - ini, 2)} segundo(s).\n\n')
+    sec = round(term - ini, 2)
+    c = ConvertSec(sec)
+    file.writelines(f'\n\nTerminado em {sec} segundo(s), {c.convert_sec()}\n\n')
