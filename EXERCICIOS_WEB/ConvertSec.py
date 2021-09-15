@@ -2,10 +2,10 @@
 Classe para converter segundos no formato h:m:s
 '''
 
+
 class ConvertSec():
     def __init__(self, sec):
         self.sec = sec
-
 
     def convert_sec(self):
         hora = minuto = segundo = 0
@@ -22,10 +22,8 @@ class ConvertSec():
             segundo = self.sec
         else:
             segundo = self.sec
-        return str(f'{hora}hs : {minuto}min : {segundo}seg')    
-        
+        return str(f'{str(hora).zfill(2)}hs : {str(minuto).zfill(2)}min : {str(segundo).zfill(2)}seg')
+
 
 if __name__ == "__main__":
     pass
-
-
