@@ -7,11 +7,15 @@ from random import randint
 
 with open('exercicio_0032.txt', 'r') as arquivo:
     palavras = [palavra for palavra in arquivo.readlines()]
-    n = randint(0, len(palavras))
-    palavra_chave = palavras[n].upper()[:-1]
+    np = len(palavras) - 1
+    n = randint(0, np)
+    if n == np:
+        palavra_chave = palavras[n].upper()
+    else:
+        palavra_chave = palavras[n].upper()[:-1]
     cont = 6
     armazena_letra = []
-    while cont >= 0:
+    while cont > 0:
         letra = input('Digite uma letra: ').upper()
         if letra in palavra_chave:
             armazena_letra.append(letra)
