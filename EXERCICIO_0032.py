@@ -33,6 +33,6 @@ with open('exercicio_0032.txt', 'r') as arquivo:
         else:
             cont -= 1
             print(f'Você errou, ainda tem {cont} tentativas.')
-            if cont == 1:
+            if cont == 0:
                 print('Você perdeu !!!')
                 break
