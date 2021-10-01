@@ -17,8 +17,12 @@ with open('exercicio_0032.txt', 'r') as arquivo:
     armazena_letra = []
     while cont > 0:
         letra = input('Digite uma letra: ').upper()
-        if letra in palavra_chave:
-            armazena_letra.append(letra)
+        if letra[0] in palavra_chave:
+            if letra[0] not in armazena_letra:
+                armazena_letra.append(letra[0])
+            else:
+                print('Você já digitou essa letra...\n\n')
+                continue
             n = 0
             for le in palavra_chave:
                 if le in armazena_letra:
@@ -32,11 +36,10 @@ with open('exercicio_0032.txt', 'r') as arquivo:
                     print('_', end='')
             if n == len(palavra_chave):
                 break
-            n = 0
             print('\n')
         else:
             cont -= 1
-            print(f'Você errou, ainda tem {cont} tentativas.')
             if cont == 0:
-                print('Você perdeu !!!')
+                print('\nVocê perdeu !!!')
                 break
+            print(f'Você errou, ainda tem {cont} tentativas.\n')        
