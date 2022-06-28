@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/home/fernando/.local/share/virtualenvs/PYTHON_VSCODE-x0kRcPd6/bin/activate", 
+    "code-runner.executorMap": {
+    
+        "python": "/home/fernando/.local/share/virtualenvs/PYTHON_VSCODE-x0kRcPd6/bin/activate",
+        
+    },
+    "python.autoComplete.addBrackets": true,
+    "python.analysis.completeFunctionParens": true
+}

@@ -1,6 +1,6 @@
-def fibo(cont, b=0, a=1, retorno=[]): 
+def fibo(cont, b=0, a=1, retorno=[]):
     if b == 0:
-        cont -= 2 
+        cont -= 2
         retorno.append(b)
         print(b)
     retorno.append(a)
@@ -10,4 +10,5 @@ def fibo(cont, b=0, a=1, retorno=[]):
     else:
         return fibo(cont-1, b=a, a=a+b)
 
-print(fibo(10))
+
+print(fibo(100))
